@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a3702506ed7184ea68279b0abe110f, type: 3}
+  m_Name: Change1
+  m_EditorClassIdentifier: 
+  SeceneNext: 1
+  SeceneInitName: 
+  DescargarEscena: {fileID: 11400000, guid: 6281c6fcac78b2048bd5a615fa14a59d, type: 2}
+  ActionInt: {fileID: 0}
+  CargarScena: {fileID: 11400000, guid: 478859b4fa2d7f3488801764286779b4, type: 2}
