@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Firebase.Database;
 using UnityEngine.UI;
 using TMPro;
 public class RankingController : MonoBehaviour
@@ -10,9 +11,18 @@ public class RankingController : MonoBehaviour
     [SerializeField] private User_SO[] ScoresUsers;
     public HandleMessage muerte;
     public User_SO userTarget;
+    [Header("FireBase")]
 
+    [SerializeField] private string UserID;
+    [SerializeField] private User_SO user_SO ;
+    private DatabaseManager reference;
+    void Awake()
+    {
+        UserID= SystemInfo.deviceUniqueIdentifier;
+    }
     void Start()
     {
+        reference= FirebaseDatabase.DefaultInstance.RootReference;
         RegistryNewScore(userTarget);
         SetScore(ScoresUsers);
 
@@ -69,4 +79,12 @@ public class RankingController : MonoBehaviour
             nameScoresList[i].text = "" + newList[i]._name;
         }      
     }
+    public void UploadStudent(User_SO[] newList)
+    {
+        for (int i = 0; i < newList.Length; i++)
+        {
+	string json = JsonUtility.ToJson(newStudent);
+        reference.Child("User").Child(UserID).Child(newList[i]._name).SetRawJsonValueAsync(json);
+        }
+    }	
 }
