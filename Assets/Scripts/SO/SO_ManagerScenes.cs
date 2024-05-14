@@ -23,15 +23,15 @@ public class SO_ManagerScenes : ScriptableObject
     }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Se cargó una nueva escena.");
-        Debug.Log("Nombre de la escena: " + scene.name);
-        Debug.Log("Modo de carga: " + mode);
+        //Debug.Log("Se cargó una nueva escena.");
+        //Debug.Log("Nombre de la escena: " + scene.name);
+        //Debug.Log("Modo de carga: " + mode);
 
     }
     public void OnSceneUnloaded(Scene scene)
     {
-        Debug.Log("Se descargó una escena.");
-        Debug.Log("Nombre de la escena: " + scene.name);
+        //Debug.Log("Se descargó una escena.");
+        //Debug.Log("Nombre de la escena: " + scene.name);
     }
     public void LoadScene(int SeceneNext)
     {
